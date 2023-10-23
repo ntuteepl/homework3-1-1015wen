@@ -24,7 +24,10 @@ int main()
         printf("%d",x);
     }
 
-    if(SUMy<SUMy) {printf("%d",y);}
+    if(SUMy<SUMy) 
+    {
+        printf("%d",y);
+    }
 
 
 }
