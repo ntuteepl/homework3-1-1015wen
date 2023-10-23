@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {
@@ -24,8 +25,3 @@ int main()
     }
 
     else if(SUMy<SUMy) {printf("%d",y);}
-
-
-
-
-}
