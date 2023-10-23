@@ -25,3 +25,9 @@ int main()
     }
 
     else if(SUMy<SUMy) {printf("%d",y);}
+
+    else
+    {
+        break;
+    }
+}
