@@ -1,34 +1,54 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {
-    int a,b,c,d,e,f;
-    
-    scanf("%d%d%d%d%d%d",&a,&b,&c,&d,&e,&f);
-    if(b<c&&d<e)
+    int s1,d1,s2,d2,s3,d3,car,temp;
+    int s[3];
+    int d[3];
+    scanf("%d%d%d%d%d%d",&s1,&d1,&s2,&d2,&s3,&d3);
+    s[0]=s1;
+    s[1]=s2;
+    s[2]=s3;
+    d[0]=d1;
+    d[1]=d2;
+    d[2]=d3;
+
+    for(int i=0;i<3;i++)
     {
-        printf("1");
+        for(int j=i;j<3;j++)
+        {
+         if(s[i]>s[j])
+         {
+          temp=s[j];
+          s[j]=s[i];
+          s[i]=temp;
+          temp=d[j];
+          d[j]=d[i];
+          d[i]=temp;
+         }
+        }
     }
-    if(b<c&&d>e&&e>=b)
+
+    car=1;
+    if(s[1]<d[0])
     {
-        printf("2");
+        car+=1;
     }
-    if(b<c&&d>e&&e<b)
+    if(s[2]<d[1])
+     {
+         car+=1;
+     }
+    if(s[2]>=d[0])
     {
-        printf("3");
+        car-=1;
     }
-    if(b>c&&d<e)
-    {
-        printf("1");
+    printf("%d",car);
     }
-    if(b>c&&d>e&&e>=b)
-    {
-        printf("2");
-    }
-    if(b>c&&d>e&&e<b)
-    {
-        printf("3");
-    }
-    
-    return 0;
-}
+
+
+
+
+
+
+
