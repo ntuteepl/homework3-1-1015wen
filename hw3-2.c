@@ -4,52 +4,66 @@
 int main()
 {
     int s1,d1,s2,d2,s3,d3,car,temp;
-    int s[3];
-    int d[3];
     scanf("%d%d%d%d%d%d",&s1,&d1,&s2,&d2,&s3,&d3);
-    
-    s[0]=s1;
-    s[1]=s2;
-    s[2]=s3;
-    d[0]=d1;
-    d[1]=d2;
-    d[2]=d3;
-
-    for(int i=0;i<3;i++)
+/*-----------------MAKE s1<s2<s3---------------*/
+    if(s1>s2)
     {
-        for(int j=i;j<3;j++)
-        {
-         if(s[i]>s[j])
-         {
-          temp=s[j];
-          s[j]=s[i];
-          s[i]=temp;
-          temp=d[j];
-          d[j]=d[i];
-          d[i]=temp;
-         }
-        }
+        temp=s1;
+        s1=s2;
+        s2=temp;
+        temp=d1;
+        d1=d2;
+        d2=temp;
+    }
+    if(s1>s3)
+    {
+        temp=s1;
+        s1=s3;
+        s3=temp;
+        temp=d1;
+        d1=d3;
+        d3=temp;
     }
 
-    car=1;
-    if(s[1]<d[0])
+    if(s2>s3)
     {
-        car+=1;
+     temp=s2;
+     s2=s3;
+     s3=temp;
+     temp=d2;
+     d2=d3;
+     d3=temp;
+
     }
-    if(s[2]<d[1])
+
+
+
+/*----------------- COUNT CAR---------------*/
+    if(s2>d1 && s3>d2)
+    {
+        car=1;
+    }
+
+    if(s2>=d1 && s3<d2)
      {
-         car+=1;
+         car=2;
      }
-    if(s[2]>=d[0])
-    {
-        car-=1;
-    }
+
+    if(s2<d1 && s3<d2 && s3>=d1)
+     {
+         car=2;
+     }
+
+    if(s2<d1 && s3>=d2 )
+     {
+         car=2;
+     }
+
+
+    if(s2<d1 && s3<d2 && s3<d1)
+     {
+         car=3;
+     }
+
     printf("%d",car);
     }
-}
-
-
-
-
-
-
