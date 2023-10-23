@@ -7,6 +7,7 @@ int main()
     int s[3];
     int d[3];
     scanf("%d%d%d%d%d%d",&s1,&d1,&s2,&d2,&s3,&d3);
+    
     s[0]=s1;
     s[1]=s2;
     s[2]=s3;
