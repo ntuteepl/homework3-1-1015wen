@@ -19,15 +19,12 @@ int main()
             printf("%d",y);
         }
     }
-    else if (SUMx<SUMy)
+    if (SUMx<SUMy)
     {
         printf("%d",x);
     }
 
-    else if(SUMy<SUMy) {printf("%d",y);}
+    if(SUMy<SUMy) {printf("%d",y);}
 
-    else
-    {
-        break;
-    }
+
 }
