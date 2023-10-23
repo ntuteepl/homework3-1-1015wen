@@ -1,11 +1,9 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int main()
 {
     int s1,d1,s2,d2,s3,d3,car,temp;
     scanf("%d%d%d%d%d%d",&s1,&d1,&s2,&d2,&s3,&d3);
-/*-----------------MAKE s1<s2<s3---------------*/
     if(s1>s2)
     {
         temp=s1;
@@ -38,7 +36,6 @@ int main()
 
 
 
-/*----------------- COUNT CAR---------------*/
     if(s2>d1 && s3>d2)
     {
         car=1;
